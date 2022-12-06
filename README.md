@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 開発言語
+- Ruby 3.0.1
+- Ruby on Rails 6.1.7
 
-Things you may want to cover:
+# 就職Termの技術
+- devise
+- Ajaxコメント機能
+- AWS
 
-* Ruby version
+# カリキュラム外の技術
+- カレンダー機能
+- ransack
 
-* System dependencies
+# 実行手順
+```
+$ git clone git@github.com:richun06/original_app.git
+$ cd original_app
+$ bundle install
+$ rails db:create && rails db:migrate
+$ rails s
+```
 
-* Configuration
 
-* Database creation
+# カタログ設計
+https://docs.google.com/spreadsheets/d/1v_arWeIlCeSx6K90vhjTjI8Zh70BiVmmk_BJ83enzic/edit#gid=610080528
 
-* Database initialization
+# テーブル定義書
+https://docs.google.com/spreadsheets/d/1v_arWeIlCeSx6K90vhjTjI8Zh70BiVmmk_BJ83enzic/edit#gid=1389939915
 
-* How to run the test suite
+# ワイヤーフレーム
+https://miro.com/app/board/uXjVP8_IhYo=/?share_link_id=748971264492
 
-* Services (job queues, cache servers, search engines, etc.)
+# ER図
+![ER図](ER図.png)
 
-* Deployment instructions
-
-* ...
+# 画面遷移図
+![画面遷移図](画面遷移図.png)
