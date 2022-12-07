@@ -47,4 +47,7 @@
     <%= form.select :division, options_for_select(CareUser.divisions), {prompt: '選択してください'} %>
   </div>
 
+  <%= form.submit "登録" %>
+  <%= link_to "戻る",care_users_path %>
+
 <% end %>
