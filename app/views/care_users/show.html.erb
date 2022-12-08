@@ -1,0 +1,29 @@
+<h1>利用者　詳細画面</h1>
+
+<p>
+  <strong>名前</strong>
+  <%= @care_user.name %>
+</p>
+<p>
+  <strong>生年月日</strong>
+  <%= @care_user.birthday %>
+</p>
+<p>
+  <strong>年齢</strong>
+  <%= @care_user.age %>歳
+</p>
+<p>
+  <strong>性別</strong>
+  <%= @care_user.sex %>
+</p>
+<p>
+  <strong>現在の利用</strong>
+  <%= @care_user.availability %>
+</p>
+<p>
+  <strong>区分</strong>
+  <%= @care_user.division %>
+</p>
+
+<%= link_to "戻る",care_users_path %>
+<%= link_to "編集",edit_care_user_path(@care_user.id) %>
