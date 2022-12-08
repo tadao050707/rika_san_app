@@ -21,6 +21,10 @@ class CareUsersController < ApplicationController
     @care_user = CareUser.find(params[:id])
   end
 
+  def edit
+    @care_user = CareUser.find(params[:id])
+  end
+
 
   private
 
