@@ -25,7 +25,7 @@
         <td><%= care_user.division %></td>
         <td><%= link_to "詳細",care_user_path(care_user.id) %></td>
         <td><%= link_to "編集",edit_care_user_path(care_user.id) %></td>
-
+        <td><%= link_to "削除",care_user_path(care_user.id), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>

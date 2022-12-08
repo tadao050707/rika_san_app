@@ -34,6 +34,12 @@ class CareUsersController < ApplicationController
     end
   end
 
+  def destroy
+    @care_user = CareUser.find(params[:id])
+    @care_user.destroy
+    redirect_to care_users_path, notice: "削除完了"
+  end
+
   private
 
   def care_user_params
