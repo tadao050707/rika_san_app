@@ -25,6 +25,14 @@ class CareUsersController < ApplicationController
     @care_user = CareUser.find(params[:id])
   end
 
+  def update
+    @care_user = CareUser.find(params[:id])
+    if @care_user.update(care_user_params)
+      redirect_to care_users_path, notice: "編集完了！"
+    else
+      render :edit
+    end
+  end
 
   private
 
