@@ -17,6 +17,11 @@ class CareUsersController < ApplicationController
     end
   end
 
+  def show
+    @care_user = CareUser.find(params[:id])
+  end
+
+
   private
 
   def care_user_params
