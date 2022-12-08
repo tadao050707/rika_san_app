@@ -2,6 +2,11 @@ class CareUsersController < ApplicationController
 
   def index
     @care_users = CareUser.all
+
+    if params[:search]
+      @care_users = @care_users.name_search(params[:search][:name]).division_search(params[:search][:division])
+        .sex_search(params[:search][:sex]).availability_search(params[:search][:availability])
+    end
   end
 
   def new

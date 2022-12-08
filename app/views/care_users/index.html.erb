@@ -1,5 +1,19 @@
 <h1>利用者一覧</h1>
 
+<%= form_with(scope: :search, url:care_users_path, local:true, method: :get) do |form| %>
+  <%= form.label :name, '名前' %>
+  <%= form.text_field :name %>
+  <%= form.label :sex, '性別' %>
+  <%= form.select :sex, options_for_select(CareUser.sexes), {prompt: '選択してください'} %>
+  <%= form.label :availability, '現在の利用' %>
+  <%= form.select :availability, options_for_select(CareUser.availabilities), {prompt: '選択してください'} %>
+  <%= form.label :division, '区分' %>
+  <%= form.select :division, options_for_select(CareUser.divisions), {prompt: '選択してください'} %>
+
+  <%= form.submit "検索"%>
+<% end %>
+
+
 <%= link_to "新規作成",new_care_user_path %>
 
 <table>
