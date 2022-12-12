@@ -31,6 +31,23 @@ class HealthsController < ApplicationController
     @health = Health.find(params[:id])
   end
 
+  def edit
+    @health = Health.find(params[:id])
+    @care_user = CareUser.find(@health.care_user_id)
+  end
+
+  def update
+    @health = Health.find(params[:id])
+    @care_user = CareUser.find(@health.care_user_id)
+    if @health.update(health_params)
+      # @care_user = CareUser.find(@health.care_user_id)
+      # redirect_to healths_path, notice: "編集完了！"
+      redirect_to controller: :healths, action: :index, care_user_id: @health.care_user_id
+    else
+      render :edit
+    end
+  end
+
   private
 
   def health_params
