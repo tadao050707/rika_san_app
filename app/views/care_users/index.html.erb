@@ -40,6 +40,7 @@
         <td><%= link_to "詳細",care_user_path(care_user.id) %></td>
         <td><%= link_to "編集",edit_care_user_path(care_user.id) %></td>
         <td><%= link_to "削除",care_user_path(care_user.id), method: :delete %></td>
+        <td><%= link_to "状態登録",new_health_path(care_user_id: care_user.id) %></td>
       </tr>
     <% end %>
   </tbody>
