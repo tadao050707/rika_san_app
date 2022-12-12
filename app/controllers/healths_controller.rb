@@ -27,6 +27,10 @@ class HealthsController < ApplicationController
     # @healths = care_user.healths
   end
 
+  def show
+    @health = Health.find(params[:id])
+  end
+
   private
 
   def health_params
