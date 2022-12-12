@@ -7,4 +7,6 @@ class CareUser < ApplicationRecord
   scope :sex_search, -> (sex) { where(sex: sex) if sex.present? }
   scope :availability_search, -> (availability) { where(availability: availability) if availability.present? }
   scope :division_search, -> (division) { where(division: division) if division.present? }
+
+  has_many :healths
 end
