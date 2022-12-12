@@ -1,0 +1,31 @@
+<h1><%= @care_user.name %>さんの状態一覧</h1>
+
+<%= link_to "戻る",care_users_path %>
+<%= link_to "新規作成",new_health_path(care_user_id: @care_user.id) %>
+
+<table>
+  <thead>
+    <tr>
+      <th>月日</th>
+      <th>バイタル</th>
+      <th>最終記録日時</th>
+      <th>コメント</th>
+      <th>責任者</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @healths.each do |health| %>
+      <tr>
+        <td><%= health.record_in_at %></td>
+        <td><%= health.blood_pressure_up %>/<%= health.blood_pressure_down %></td>
+        <td></td>
+        <td></td>
+        <td><%= health.responsibility %></td>
+        <td><%= link_to "詳細",health_path(health.id) %></td>
+        <td><%= link_to "編集",edit_health_path(health.id) %></td>
+        <td><%= link_to "削除",health_path(health.id), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

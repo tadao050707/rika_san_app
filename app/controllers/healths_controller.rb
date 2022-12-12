@@ -20,6 +20,13 @@ class HealthsController < ApplicationController
     end
   end
 
+  def index
+    # byebug
+    @healths = Health.where(care_user_id: params[:care_user_id])
+    @care_user = CareUser.find(params[:care_user_id])
+    # @healths = care_user.healths
+  end
+
   private
 
   def health_params
