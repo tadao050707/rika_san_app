@@ -48,6 +48,13 @@ class HealthsController < ApplicationController
     end
   end
 
+  def destroy
+    @health = Health.find(params[:id])
+    @health.destroy
+    # redirect_to healths_path, notice: "削除完了"
+    redirect_to controller: :healths, action: :index, care_user_id: @health.care_user_id
+  end
+
   private
 
   def health_params
