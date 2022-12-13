@@ -2,7 +2,7 @@
 
 <p>
   <strong>日付</strong>
-  <%= @health.record_in_at %>
+  <%= @health.record_in_at.strftime("%Y年 %m月 %d日") %>
 </p>
 
 <p>
@@ -12,12 +12,12 @@
 
 <p>
   <strong>計測時間</strong>
-  <%= @health.time %>
+  <%= @health.time.strftime("%H:%M") %>
 </p>
 
 <p>
   <strong>体温</strong>
-  <%= @health.body_temperature %>
+  <%= @health.body_temperature %>℃
 </p>
 
 <p>
@@ -27,7 +27,7 @@
 
 <p>
   <strong>脈拍</strong>
-  <%= @health.pulse %>
+  <%= @health.pulse %>回/分
 </p>
 
 <p>
@@ -50,7 +50,7 @@
 
 <p>
   <strong>入浴時間</strong>
-  <%= @health.bath_time %>
+  <%= @health.bath_time.strftime("%H:%M") %>
 </p>
 
 <p>
@@ -65,30 +65,30 @@
 
 <p>
   <strong>身長</strong>
-  <%= @health.height %>
+  <%= @health.height %>cm
 </p>
 
 <p>
   <strong>体重</strong>
-  <%= @health.body_weight %>
+  <%= @health.body_weight %>kg
 </p>
 
 <p>
   <strong>日中の様子</strong>
   <%= @health.daytime %>
-  スタッフ名<%= @health.daytime_staff %>
+  <strong>スタッフ名</strong><%= @health.daytime_staff %>
 </p>
 
 <p>
   <strong>夜間の様子</strong>
   <%= @health.night %>
-  スタッフ名<%= @health.night_staff %>
+  <strong>スタッフ名</strong><%= @health.night_staff %>
 </p>
 
 <p>
   <strong>連絡事項</strong>
   <%= @health.contact %>
-  スタッフ名<%= @health.contact_staff %>
+  <strong>スタッフ名</strong><%= @health.contact_staff %>
 </p>
 
 <%= link_to "戻る",healths_path(care_user_id: @health.care_user.id) %>
