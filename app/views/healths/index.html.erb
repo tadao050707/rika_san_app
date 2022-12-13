@@ -19,7 +19,7 @@
       <tr>
         <td><%= health.record_in_at %></td>
         <td><%= health.blood_pressure_up %>/<%= health.blood_pressure_down %></td>
-        <td></td>
+        <td><%= health.updated_at.strftime("%H:%M") %></td>
         <td></td>
         <td><%= health.responsibility %></td>
         <td><%= link_to "詳細",health_path(health.id) %></td>
