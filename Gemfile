@@ -61,3 +61,6 @@ gem 'rexml'
 gem 'devise-i18n'
 
 gem 'rails_admin'
+
+gem 'jquery-rails'
+gem 'jp_prefecture'
