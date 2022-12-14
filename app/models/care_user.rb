@@ -9,4 +9,5 @@ class CareUser < ApplicationRecord
   scope :division_search, -> (division) { where(division: division) if division.present? }
 
   has_many :healths
+  belongs_to :user, optional: true
 end

@@ -6,6 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   # def new
+  #   @care_users = CareUser.where(user_id: nil) #ケアユーザの中にユーザが入っていない人を探してくる
   #   super
   # end
 

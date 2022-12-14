@@ -64,3 +64,5 @@ gem 'rails_admin'
 
 gem 'jquery-rails'
 gem 'jp_prefecture'
+
+gem 'simple_calendar'

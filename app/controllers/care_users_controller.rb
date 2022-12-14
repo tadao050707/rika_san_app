@@ -48,7 +48,7 @@ class CareUsersController < ApplicationController
   private
 
   def care_user_params
-    params.require(:care_user).permit(:name, :birthday, :age, :sex, :availability, :division, :image).merge(division: params[:care_user][:division].to_i)
+    params.require(:care_user).permit(:name, :birthday, :age, :sex, :availability, :division, :image, :user_id).merge(division: params[:care_user][:division].to_i)
   end
 
 end
